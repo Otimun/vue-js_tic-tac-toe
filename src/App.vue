@@ -5,7 +5,7 @@ import Header from './components/Header.vue'
 
 <template>
     <div class="wrapper">
-      <Header title="Tic Tac Toe" />
+      <Header headerTitle="Tic Tac Toe" />
       <RouterView />
       <nav>
         <RouterLink to="/">Home</RouterLink>

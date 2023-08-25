@@ -1,11 +1,11 @@
 <script setup>
   const props = defineProps({
-    title: String,
-    color: String,
+    headerTitle: String,
+    headerColor: String,
   })
 </script>
 <template>
-  <h1 :style="{ color: color }">{{title}}</h1>
+  <h1 :style="{ color: headerColor }">{{headerTitle}}</h1>
 </template>
 
 <style scoped>

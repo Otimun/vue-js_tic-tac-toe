@@ -5,10 +5,10 @@ import Tile from '@/components/Tile.vue'
 
 describe('Tile', () => {
   it('renders a square tile', () => {
-    const size = '100px';
+    const tileSize = '100px';
     const wrapper = mount(Tile, {
       props: {
-        size
+        tileSize
       }
     })
     const tileElement = wrapper.find('.tile')

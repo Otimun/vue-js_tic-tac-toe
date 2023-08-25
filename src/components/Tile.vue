@@ -1,6 +1,6 @@
 <script setup>
   const props = defineProps({
-    size: {
+    tileSize: {
       type: String,
       default: '50px',
     },
@@ -9,7 +9,7 @@
 </script>
 
 <template>
-  <div class="tile" :style="{ width: size, height: size }">
+  <div class="tile" :style="{ width: tileSize, height: tileSize }">
   </div>
 </template>
 
