@@ -4,12 +4,35 @@ import { mount } from '@vue/test-utils'
 import Header from '../Header.vue'
 
 describe('Header', () => {
-  it('displays h1 with given title', () => {
-    const wrapper = mount(Header, { props: { title: 'Test Title' } })
-    expect(wrapper.html()).toContain('>Test Title</h1>')
+  it('renders a header', () => {
+    const title = 'Test Title'
+    const wrapper = mount(Header, {
+      props: {
+        title
+      }
+    })
+    const headerElement = wrapper.find('h1')
+    expect(headerElement.exists()).toBe(true)
+  })
+  it('displays given title', () => {
+    const title = 'Test Title'
+    const wrapper = mount(Header, {
+      props: {
+        title
+      }
+    })
+    const headerElement = wrapper.find('h1')
+    console.log(headerElement.text())
+    expect(headerElement.text()).toBe(title)
   })
   it('displays in the color specified', () => {
-    const wrapper = mount(Header, { props: { color: 'blue' } })
-    expect(wrapper.findComponent('h1').attributes('style')).toContain('blue')
+    const color = 'blue'
+    const wrapper = mount(Header, {
+      props: {
+        color
+      }
+    })
+    const headerElement = wrapper.find('h1')
+    expect(headerElement.element.style.color).toBe(color)
   })
 })
