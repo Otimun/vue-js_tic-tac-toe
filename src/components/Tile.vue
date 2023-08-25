@@ -1,6 +1,9 @@
 <script setup>
   const props = defineProps({
-    size: String
+    size: {
+      type: String,
+      default: '50px',
+    }
   })
 </script>
 
