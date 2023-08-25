@@ -5,14 +5,14 @@ import Header from './components/Header.vue'
 
 <template>
     <div class="wrapper">
-      <Header title="Tic Tac Toe"/>
+      <Header title="Tic Tac Toe" />
       <RouterView />
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
     </div>
-
+    
 </template>
 
 <style scoped>
