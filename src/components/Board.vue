@@ -1,8 +1,14 @@
 <script setup>
   import Tile from './Tile.vue'
   const props = defineProps({
-    boardSize: Number,
-    boardTiles: Array
+    boardSize: {
+      type: Number,
+      required: true,
+    },
+    boardTiles: {
+      type: Array,
+      required: true,
+    }
   })
 
 </script>

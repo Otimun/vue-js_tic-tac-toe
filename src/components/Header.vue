@@ -1,6 +1,9 @@
 <script setup>
   const props = defineProps({
-    headerTitle: String,
+    headerTitle: {
+      type: String,
+      required: true,
+    },
     headerColor: String,
   })
 </script>
